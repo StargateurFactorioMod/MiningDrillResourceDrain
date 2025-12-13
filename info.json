@@ -1,6 +1,6 @@
 {
   "name": "MiningDrillResourceDrain",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "title": "Mining Drill Resource Drain",
   "author": "Stargateur",
   "description": "Replace mining productivity with resource drain mechanism",
