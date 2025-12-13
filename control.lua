@@ -2,22 +2,36 @@ local level_max = settings.startup["mdrd-max-level"].value
 
 local filter_mining_drill = { filter = "type", type = "mining-drill" }
 
+local UPGRADE_NOOP = 0
+local UPGRADE_SUCCESS = 1
+local UPGRADE_FAIL = 2
+
 script.on_init(function()
   storage.forces = {}
 end)
+
+function print_result(force, result)
+  force.print(string.format("mdrd: success %d ,fail %d, noop %d", result.success, result.fail, result.noop))
+end
 
 function update_force_to_current_level(force)
   local result = {
     success = 0,
     fail = 0,
+    noop = 0,
   }
 
   for _, surface in pairs(game.surfaces) do
     for _, mining_drill in ipairs(surface.find_entities_filtered { type = "mining-drill", force = force }) do
-      if upgrade(mining_drill) then
+      local x = upgrade(mining_drill)
+      if x == UPGRADE_NOOP then
+        result.noop = result.noop + 1
+      elseif x == UPGRADE_SUCCESS then
         result.success = result.success + 1
-      else
+      elseif x == UPGRADE_FAIL then
         result.fail = result.fail + 1
+      else
+        log("mdrd: upgrade() return unexpected value")
       end
     end
   end
@@ -31,31 +45,44 @@ script.on_event(defines.events.on_research_finished, function(event)
   if name == "mining-drill-resource-drain" then
     local force = research.force
     storage.forces[force.name] = level
-    update_force_to_current_level(force)
+    local result = update_force_to_current_level(force)
+    if result.fail ~= 0 then
+      print_result(force, result)
+    end
   end
 end)
 
+function get_base_name(name)
+  return string.match(name, "^(.*)%-mdrd.*$")
+end
+
+function is_normal_mining_drill(name)
+  return not get_base_name(name)
+end
+
 function upgrade(mining_drill)
   local level = storage.forces[mining_drill.force.name]
-  local name = string.match(mining_drill.name, "^(.-)%-[^%-]+%-%d+$") or mining_drill.name
+  local name = get_base_name(mining_drill.name) or mining_drill.name
   if level then
-    name = name .. "-" .. mining_drill.quality.name .. "-" .. level
+    name = name .. "-mdrd" .. mining_drill.quality.name .. level
   end
 
-  if mining_drill.order_upgrade({
-    target = {
-      name = name,
-      quality = mining_drill.quality
-    },
-    force = mining_drill.force,
-  }) then
-    mining_drill.apply_upgrade()
-    return true
+  if name == mining_drill.name then
+    return UPGRADE_NOOP
+  elseif mining_drill.order_upgrade({
+        target = {
+          name = name,
+          quality = mining_drill.quality
+        },
+        force = mining_drill.force,
+      }) then
+    mining_drill.force.print(string.format("mdrd: upgrade %s to %s", mining_drill.name, name))
+    local a, b = mining_drill.apply_upgrade()
+    return UPGRADE_SUCCESS
   else
-    log(string.format("can't upgrade %s to %s", mining_drill.name, name))
-    return false
+    mining_drill.force.print(string.format("mdrd: can't upgrade %s to %s", mining_drill.name, name))
+    return UPGRADE_FAIL
   end
-
 end
 
 local on_built = function(event)
@@ -85,9 +112,9 @@ function refresh_all_level()
 end
 
 function upgrade_all_forces()
-    for _, force in pairs(game.forces) do
+  for _, force in pairs(game.forces) do
     local result = update_force_to_current_level(force)
-    force.print(string.format("updated %d mining drill, fail to update %d mining drill", result.success, result.fail))
+    print_result(force, result)
   end
 end
 
@@ -107,8 +134,27 @@ function reset_all_level()
 end
 
 commands.add_command("mdrd_unresearch",
-"UnResearch the Mining Drill Resource Drain tech. If you want to remove this mod use this before",
-function()
-  reset_all_level()
-  upgrade_all_forces()
-end)
+  "UnResearch the Mining Drill Resource Drain tech. If you want to remove this mod use this before",
+  function(_)
+    reset_all_level()
+    upgrade_all_forces()
+  end)
+
+commands.add_command("mdrd_list_effects",
+  "Show by how many each mining drill multiply resource",
+  function(command)
+    local player = game.get_player(command.player_index)
+    if player then
+      local level = storage.forces[player.force.name] or 0
+      for name, mining_drill in pairs(prototypes.get_entity_filtered{filter_mining_drill}) do
+        if is_normal_mining_drill(name) then
+          local rdrp = mining_drill.resource_drain_rate_percent or 100
+          local new_rdrp = rdrp - ((rdrp / level_max) * level)
+          if new_rdrp == 0 then
+            new_rdrp = 1
+          end
+          player.print(string.format("mdrd: %s multiply ore by %.2f", name, 100.0 / new_rdrp))
+        end
+      end
+    end
+  end)

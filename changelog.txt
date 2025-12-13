@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+Date: 2025-12-13
+  Features:
+    - Improve diagnostic of command
+    - Add command to show current effectiveness /mdrd_list_effects
+  Bugfixes:
+    - order_upgrade refuse to upgrade hidden entity, mining drill are now not hidden ! Sorry !
+  Changes:
+    - Added suffix to special mining drill name. If that delete your mining drill please use
+      previous save or deconstruct your mining drills before upgrade, I just publish this mod
+      I don't want to do migration for 0 users :p
+---------------------------------------------------------------------------------------------------
 Version: 0.3.0
 Date: 2025-12-13
   Features:
