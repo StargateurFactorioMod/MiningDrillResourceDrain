@@ -1,4 +1,5 @@
-local level_max = settings.startup["mining-drill-resource-drain-max-level"].value
+local level_max = settings.startup["mdrd-max-level"].value
+local remove_mining_productivity = settings.startup["mdrd-remove-mining-productivity"].value
 
 local effects = {
   {
@@ -196,19 +197,21 @@ end
 data.extend(hiden_mining_drills)
 
 -- Remove mining productivity
-local i = 1
-while true do
-  local technology_mining_productivity = data.raw["technology"]["mining-productivity-" .. i]
-  if technology_mining_productivity then
-    -- doesn't work soooo
-    technology_mining_productivity.enabled = false
-    technology_mining_productivity.visible_when_disabled = false
-    -- boom
-    data.raw["technology"]["mining-productivity-" .. i] = nil
+if remove_mining_productivity then
+  local i = 1
+  while true do
+    local technology_mining_productivity = data.raw["technology"]["mining-productivity-" .. i]
+    if technology_mining_productivity then
+      -- doesn't work soooo
+      technology_mining_productivity.enabled = false
+      technology_mining_productivity.visible_when_disabled = false
+      -- boom
+      data.raw["technology"]["mining-productivity-" .. i] = nil
 
-    i = i + 1
-  else
-    break
+      i = i + 1
+    else
+      break
+    end
   end
 end
 

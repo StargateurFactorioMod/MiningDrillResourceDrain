@@ -1,4 +1,4 @@
-local level_max = settings.startup["mining-drill-resource-drain-max-level"].value
+local level_max = settings.startup["mdrd-max-level"].value
 
 local filter_mining_drill = { filter = "type", type = "mining-drill" }
 
