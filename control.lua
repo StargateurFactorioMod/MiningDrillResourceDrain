@@ -10,10 +10,6 @@ script.on_init(function()
   storage.forces = {}
 end)
 
-function print_result(force, result)
-  force.print(string.format("mdrd: success %d ,fail %d, noop %d", result.success, result.fail, result.noop))
-end
-
 function update_force_to_current_level(force)
   local result = {
     success = 0,
@@ -36,7 +32,7 @@ function update_force_to_current_level(force)
     end
   end
 
-  return result
+  force.print(string.format("mdrd: success %d ,fail %d, noop %d", result.success, result.fail, result.noop))
 end
 
 script.on_event(defines.events.on_research_finished, function(event)
@@ -45,10 +41,7 @@ script.on_event(defines.events.on_research_finished, function(event)
   if name == "mining-drill-resource-drain" then
     local force = research.force
     storage.forces[force.name] = level
-    local result = update_force_to_current_level(force)
-    if result.fail ~= 0 then
-      print_result(force, result)
-    end
+    update_force_to_current_level(force)
   end
 end)
 
@@ -113,8 +106,7 @@ end
 
 function upgrade_all_forces()
   for _, force in pairs(game.forces) do
-    local result = update_force_to_current_level(force)
-    print_result(force, result)
+    update_force_to_current_level(force)
   end
 end
 
@@ -146,7 +138,7 @@ commands.add_command("mdrd_list_effects",
     local player = game.get_player(command.player_index)
     if player then
       local level = storage.forces[player.force.name] or 0
-      for name, mining_drill in pairs(prototypes.get_entity_filtered{filter_mining_drill}) do
+      for name, mining_drill in pairs(prototypes.get_entity_filtered { filter_mining_drill }) do
         if is_normal_mining_drill(name) then
           local rdrp = mining_drill.resource_drain_rate_percent or 100
           local new_rdrp = rdrp - ((rdrp / level_max) * level)
