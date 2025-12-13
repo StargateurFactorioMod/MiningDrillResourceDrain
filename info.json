@@ -1,0 +1,8 @@
+{
+  "name": "MiningDrillResourceDrain",
+  "version": "0.1.0",
+  "title": "Mining Drill Resource Drain",
+  "author": "Stargateur",
+  "description": "Replace mining productivity with resource drain mechanism",
+  "factorio_version": "2.0"
+}
