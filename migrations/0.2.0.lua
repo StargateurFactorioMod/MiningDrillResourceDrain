@@ -1,10 +1,15 @@
+local save = {}
+for force, level in pairs(storage.forces) do
+  save[force] = level
+  level = 0
+end
+upgrade_all_forces()
+for force, level in pairs(storage.forces) do
+  level = save[force]
+end
+upgrade_all_forces()
+
 local level_max = settings.startup["mining-drill-resource-drain-max-level"].value
-
-local filter_mining_drill = { filter = "type", type = "mining-drill" }
-
-script.on_init(function()
-  storage.forces = {}
-end)
 
 function update_force_to_current_level(force)
   local result = {
@@ -24,16 +29,6 @@ function update_force_to_current_level(force)
 
   return result
 end
-
-script.on_event(defines.events.on_research_finished, function(event)
-  local research = event.research
-  local name, level = string.match(research.name, "^(.-)%-(%d+)$")
-  if name == "mining-drill-resource-drain" then
-    local force = research.force
-    storage.forces[force.name] = level
-    update_force_to_current_level(force)
-  end
-end)
 
 function upgrade(mining_drill)
   local level = storage.forces[mining_drill.force.name]
@@ -62,17 +57,6 @@ function upgrade(mining_drill)
 
 end
 
-local on_built = function(event)
-  local entity = event.entity
-  local level = storage.forces[entity.force.name]
-  if level then
-    upgrade(entity)
-  end
-end
-
-script.on_event(defines.events.on_built_entity, on_built, { filter_mining_drill })
-script.on_event(defines.events.on_robot_built_entity, on_built, { filter_mining_drill })
-
 function refresh_all_level()
   for name, force in pairs(game.forces) do
     local level
@@ -95,11 +79,6 @@ function upgrade_all_forces()
   end
 end
 
-commands.add_command("mdrd_refresh", "In case of bugs try this", function(command)
-  refresh_all_level()
-  upgrade_all_forces()
-end)
-
 function reset_all_level()
   for _, force in pairs(game.forces) do
     for i = 1, level_max do
@@ -109,10 +88,3 @@ function reset_all_level()
   end
   storage.forces = {}
 end
-
-commands.add_command("mdrd_unresearch",
-"UnResearch the Mining Drill Resource Drain tech. If you want to remove this mod use this before",
-function()
-  reset_all_level()
-  upgrade_all_forces()
-end)

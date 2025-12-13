@@ -145,19 +145,22 @@ local hiden_mining_drills = {}
 
 for level = 1, level_max do
   for name, mining_drill in pairs(data.raw["mining-drill"]) do
-    local hiden_mining_drill = table.deepcopy(mining_drill)
-    hiden_mining_drill.hidden = false
-    hiden_mining_drill.placeable_by = { item = name, count = 1 }
-    hiden_mining_drill.localised_name = { "entity-name." .. name }
-    hiden_mining_drill.localised_description = { "entity-description." .. name }
-    hiden_mining_drill.name = "mining-drill-resource-drain" .. "-" .. hiden_mining_drill.name .. "-" .. level
-    local rdrp = hiden_mining_drill.resource_drain_rate_percent or 100
-    local new_rdrp = rdrp - ((rdrp / level_max) * level)
-    if new_rdrp == 0 then
-      new_rdrp = 1
+    for quality_name, quality in pairs(data.raw["quality"]) do
+      local hiden_mining_drill = table.deepcopy(mining_drill)
+      hiden_mining_drill.hidden = false
+      hiden_mining_drill.placeable_by = { item = name, count = 1 }
+      hiden_mining_drill.localised_name = { "entity-name." .. name }
+      hiden_mining_drill.localised_description = { "entity-description." .. name }
+      hiden_mining_drill.name = hiden_mining_drill.name .. "-" .. quality_name .. "-" .. level
+      local rdrp = hiden_mining_drill.resource_drain_rate_percent or 100
+      local new_rdrp = rdrp - ((rdrp / level_max) * level)
+      if new_rdrp == 0 then
+        new_rdrp = 1
+      end
+      hiden_mining_drill.resource_drain_rate_percent = new_rdrp
+      hiden_mining_drill.mining_speed = hiden_mining_drill.mining_speed * (1 + quality.level * 0.3)
+      table.insert(hiden_mining_drills, hiden_mining_drill)
     end
-    hiden_mining_drill.resource_drain_rate_percent = new_rdrp
-    table.insert(hiden_mining_drills, hiden_mining_drill)
   end
 
   if level > 6 then
@@ -189,6 +192,7 @@ end
 
 data.extend(hiden_mining_drills)
 
+-- Remove mining productivity
 local i = 1
 while true do
   local technology_mining_productivity = data.raw["technology"]["mining-productivity-" .. i]
@@ -197,10 +201,15 @@ while true do
     technology_mining_productivity.enabled = false
     technology_mining_productivity.visible_when_disabled = false
     -- boom
-    data.raw["technology"]["mining-productivity-" .. level] = nil
-    
+    data.raw["technology"]["mining-productivity-" .. i] = nil
+
     i = i + 1
   else
     break
   end
+end
+
+-- remove drain resource bonus of mining drill
+for _, quality in pairs(data.raw["quality"]) do
+  quality.mining_drill_resource_drain_multiplier = 1
 end
