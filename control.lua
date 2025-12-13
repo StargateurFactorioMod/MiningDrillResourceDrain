@@ -37,12 +37,9 @@ end)
 
 function upgrade(mining_drill)
   local level = storage.forces[mining_drill.force.name]
-  local base_name = mining_drill.prototype.items_to_place_this[1].name
-  local name
+  local name = string.match(mining_drill.name, "^(.-)%-[^%-]+%-%d+$") or mining_drill.name
   if level then
-    name = base_name .. "-" .. mining_drill.quality.name .. "-" .. level
-  else
-    name = base_name
+    name = name .. "-" .. mining_drill.quality.name .. "-" .. level
   end
 
   if mining_drill.order_upgrade({
@@ -55,8 +52,7 @@ function upgrade(mining_drill)
     mining_drill.apply_upgrade()
     return true
   else
-    log("can't upgrade")
-    log(serpent.block(mining_drill))
+    log(string.format("can't upgrade %s to %s", mining_drill.name, name))
     return false
   end
 
