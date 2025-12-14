@@ -1,4 +1,25 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.0
+Date: 2025-12-14
+  Features:
+    - Way more robust, I consider this as close to 1.0.0
+  Changes:
+    - Remove settings for max level
+    - Now Max level is 7, each time you upgrade you will recieve massive boost.
+      Unfortunaly resource drain is not a floating number.
+    - Cost was unbalanced.
+      Mining prodctivity cost for level 1000 : ~1 251 M
+      Mining efficienty cost for level 7 : ~1 111 M
+      It's less but you loose granuality of mining productivity.
+    - Set all mining drill base resource drain to 100 for balance
+    - Change icons
+    - Reduce thumbnail size 288x288 is standard for mod portal and compress
+    - Rename command mdrd_list_effects to mdrd_info
+    - rename command mdrd_refresh to mdrd_upgrade_all
+    - rename command mdrd_reset to mdrd_downgrade_all
+    - Rename command mdrd_unresearch to mdrd_unresearch_all
+    - Remove debug output
+---------------------------------------------------------------------------------------------------
 Version: 0.6.0
 Date: 2025-12-14
   Changes:
