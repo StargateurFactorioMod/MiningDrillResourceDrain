@@ -1,13 +1,16 @@
 local level_max = settings.startup["mdrd-max-level"].value
 local remove_mining_productivity = settings.startup["mdrd-remove-mining-productivity"].value
-local icon = "__MiningDrillResourceDrain__/thumbnail.png"
-local icon_size = 1024
+local icon_64 = "__MiningDrillResourceDrain__/icon_64.png"
+local icon_size_64 = 64
+
+local icon_128 = "__MiningDrillResourceDrain__/icon_128.png"
+local icon_size_128 = 128
 
 local effects = {
   {
     type = "nothing",
-    icon = icon,
-    icon_size = icon_size,
+    icon = icon_64,
+    icon_size = icon_size_64,
     effect_description = {
       "technology-effects.mining-drill-resource-drain",
       tostring(100 / level_max),
@@ -17,9 +20,9 @@ local effects = {
 
 data:extend({ {
   type = "technology",
-  name = "mining-drill-resource-drain-1",
-  icon = icon,
-  icon_size = icon_size,
+  name = "mining-efficiency-1",
+  icon = icon_128,
+  icon_size = icon_size_128,
   effects = effects,
   prerequisites = { "automation-science-pack" },
   upgrade = true,
@@ -36,12 +39,12 @@ data:extend({ {
 
 data:extend({ {
   type = "technology",
-  name = "mining-drill-resource-drain-2",
-  icon = icon,
-  icon_size = icon_size,
+  name = "mining-efficiency-2",
+  icon = icon_128,
+  icon_size = icon_size_128,
   effects = effects,
   upgrade = true,
-  prerequisites = { "logistic-science-pack", "mining-drill-resource-drain-1" },
+  prerequisites = { "logistic-science-pack", "mining-efficiency-1" },
   unit =
   {
     count = 200,
@@ -56,12 +59,12 @@ data:extend({ {
 
 data:extend({ {
   type = "technology",
-  name = "mining-drill-resource-drain-3",
-  icon = icon,
-  icon_size = icon_size,
+  name = "mining-efficiency-3",
+  icon = icon_128,
+  icon_size = icon_size_128,
   effects = effects,
   upgrade = true,
-  prerequisites = { "chemical-science-pack", "mining-drill-resource-drain-2" },
+  prerequisites = { "chemical-science-pack", "mining-efficiency-2" },
   unit =
   {
     count = 300,
@@ -77,12 +80,12 @@ data:extend({ {
 
 data:extend({ {
   type = "technology",
-  name = "mining-drill-resource-drain-4",
-  icon = icon,
-  icon_size = icon_size,
+  name = "mining-efficiency-4",
+  icon = icon_128,
+  icon_size = icon_size_128,
   effects = effects,
   upgrade = true,
-  prerequisites = { "production-science-pack", "mining-drill-resource-drain-3" },
+  prerequisites = { "production-science-pack", "mining-efficiency-3" },
   unit =
   {
     count = 400,
@@ -99,12 +102,12 @@ data:extend({ {
 
 data:extend({ {
   type = "technology",
-  name = "mining-drill-resource-drain-5",
-  icon = icon,
-  icon_size = icon_size,
+  name = "mining-efficiency-5",
+  icon = icon_128,
+  icon_size = icon_size_128,
   effects = effects,
   upgrade = true,
-  prerequisites = { "utility-science-pack", "mining-drill-resource-drain-4" },
+  prerequisites = { "utility-science-pack", "mining-efficiency-4" },
   unit =
   {
     count = 500,
@@ -122,12 +125,12 @@ data:extend({ {
 
 data:extend({ {
   type = "technology",
-  name = "mining-drill-resource-drain-6",
-  icon = icon,
-  icon_size = icon_size,
+  name = "mining-efficiency-6",
+  icon = icon_128,
+  icon_size = icon_size_128,
   effects = effects,
   upgrade = true,
-  prerequisites = { "space-science-pack", "mining-drill-resource-drain-5" },
+  prerequisites = { "space-science-pack", "mining-efficiency-5" },
   unit =
   {
     count = 1000,
@@ -153,8 +156,8 @@ for level = 1, level_max do
       for name, mining_drill in pairs(data.raw["mining-drill"]) do
         local hidden_mining_drill = table.deepcopy(mining_drill)
         hidden_mining_drill.hidden = false
-        hidden_mining_drill.icon = icon
-        hidden_mining_drill.icon_size = icon_size
+        hidden_mining_drill.icon = icon_64
+        hidden_mining_drill.icon_size = icon_size_64
         hidden_mining_drill.hidden_in_factoriopedia = true
         hidden_mining_drill.placeable_by = { item = name, count = 1 }
         hidden_mining_drill.localised_name = { "entity-name." .. name }
@@ -179,12 +182,12 @@ for level = 1, level_max do
   if level > 6 then
     data:extend({ {
       type = "technology",
-      name = "mining-drill-resource-drain-" .. level,
-      icon = icon,
-      icon_size = icon_size,
+      name = "mining-efficiency-" .. level,
+      icon = icon_128,
+      icon_size = icon_size_128,
       effects = effects,
       upgrade = true,
-      prerequisites = { "mining-drill-resource-drain-" .. level - 1 },
+      prerequisites = { "mining-efficiency-" .. level - 1 },
       unit =
       {
         count = 3 ^ (level - 6) * 1000,

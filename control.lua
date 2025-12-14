@@ -38,7 +38,7 @@ end
 script.on_event(defines.events.on_research_finished, function(event)
   local research = event.research
   local name, level = string.match(research.name, "^(.-)%-(%d+)$")
-  if name == "mining-drill-resource-drain" then
+  if name == "mining-efficiency" then
     local force = research.force
     storage.forces[force.name] = level
     update_force_to_current_level(force)
@@ -93,7 +93,7 @@ function refresh_all_level()
   for name, force in pairs(game.forces) do
     local level
     for i = 1, level_max do
-      local tech = force.technologies["mining-drill-resource-drain-" .. i]
+      local tech = force.technologies["mining-efficiency-" .. i]
       if not tech.researched then
         break
       else
@@ -118,7 +118,7 @@ end)
 function reset_all_level()
   for _, force in pairs(game.forces) do
     for i = 1, level_max do
-      local tech = force.technologies["mining-drill-resource-drain-" .. i]
+      local tech = force.technologies["mining-efficiency-" .. i]
       tech.researched = false
     end
   end
