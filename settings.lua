@@ -4,8 +4,8 @@ data:extend({
     name = "mdrd-max-level",
     setting_type = "startup",
     minimum_value = 6,
-    default_value = 20,
-    maximum_value = 30,
+    default_value = 18,
+    maximum_value = 35,
   },
   {
     type = "bool-setting",

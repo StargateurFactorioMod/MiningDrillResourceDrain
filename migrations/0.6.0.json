@@ -1,0 +1,631 @@
+{
+  "entity": [
+    ["electric-mining-drill-mdrdnormal10", "electric-mining-drill-mdrdnormalA"],
+    ["electric-mining-drill-mdrdnormal11", "electric-mining-drill-mdrdnormalB"],
+    ["electric-mining-drill-mdrdnormal12", "electric-mining-drill-mdrdnormalC"],
+    ["electric-mining-drill-mdrdnormal13", "electric-mining-drill-mdrdnormalD"],
+    ["electric-mining-drill-mdrdnormal14", "electric-mining-drill-mdrdnormalE"],
+    ["electric-mining-drill-mdrdnormal15", "electric-mining-drill-mdrdnormalF"],
+    ["electric-mining-drill-mdrdnormal16", "electric-mining-drill-mdrdnormalG"],
+    ["electric-mining-drill-mdrdnormal17", "electric-mining-drill-mdrdnormalH"],
+    ["electric-mining-drill-mdrdnormal18", "electric-mining-drill-mdrdnormalI"],
+    ["electric-mining-drill-mdrdnormal19", "electric-mining-drill-mdrdnormalJ"],
+    ["electric-mining-drill-mdrdnormal20", "electric-mining-drill-mdrdnormalK"],
+    ["electric-mining-drill-mdrdnormal21", "electric-mining-drill-mdrdnormalL"],
+    ["electric-mining-drill-mdrdnormal22", "electric-mining-drill-mdrdnormalM"],
+    ["electric-mining-drill-mdrdnormal23", "electric-mining-drill-mdrdnormalN"],
+    ["electric-mining-drill-mdrdnormal24", "electric-mining-drill-mdrdnormalO"],
+    ["electric-mining-drill-mdrdnormal25", "electric-mining-drill-mdrdnormalP"],
+    ["electric-mining-drill-mdrdnormal26", "electric-mining-drill-mdrdnormalQ"],
+    ["electric-mining-drill-mdrdnormal27", "electric-mining-drill-mdrdnormalR"],
+    ["electric-mining-drill-mdrdnormal28", "electric-mining-drill-mdrdnormalS"],
+    ["electric-mining-drill-mdrdnormal29", "electric-mining-drill-mdrdnormalT"],
+    ["electric-mining-drill-mdrdnormal30", "electric-mining-drill-mdrdnormalU"],
+
+    [
+      "electric-mining-drill-mdrduncommon10",
+      "electric-mining-drill-mdrduncommonA"
+    ],
+    [
+      "electric-mining-drill-mdrduncommon11",
+      "electric-mining-drill-mdrduncommonB"
+    ],
+    [
+      "electric-mining-drill-mdrduncommon12",
+      "electric-mining-drill-mdrduncommonC"
+    ],
+    [
+      "electric-mining-drill-mdrduncommon13",
+      "electric-mining-drill-mdrduncommonD"
+    ],
+    [
+      "electric-mining-drill-mdrduncommon14",
+      "electric-mining-drill-mdrduncommonE"
+    ],
+    [
+      "electric-mining-drill-mdrduncommon15",
+      "electric-mining-drill-mdrduncommonF"
+    ],
+    [
+      "electric-mining-drill-mdrduncommon16",
+      "electric-mining-drill-mdrduncommonG"
+    ],
+    [
+      "electric-mining-drill-mdrduncommon17",
+      "electric-mining-drill-mdrduncommonH"
+    ],
+    [
+      "electric-mining-drill-mdrduncommon18",
+      "electric-mining-drill-mdrduncommonI"
+    ],
+    [
+      "electric-mining-drill-mdrduncommon19",
+      "electric-mining-drill-mdrduncommonJ"
+    ],
+    [
+      "electric-mining-drill-mdrduncommon20",
+      "electric-mining-drill-mdrduncommonK"
+    ],
+    [
+      "electric-mining-drill-mdrduncommon21",
+      "electric-mining-drill-mdrduncommonL"
+    ],
+    [
+      "electric-mining-drill-mdrduncommon22",
+      "electric-mining-drill-mdrduncommonM"
+    ],
+    [
+      "electric-mining-drill-mdrduncommon23",
+      "electric-mining-drill-mdrduncommonN"
+    ],
+    [
+      "electric-mining-drill-mdrduncommon24",
+      "electric-mining-drill-mdrduncommonO"
+    ],
+    [
+      "electric-mining-drill-mdrduncommon25",
+      "electric-mining-drill-mdrduncommonP"
+    ],
+    [
+      "electric-mining-drill-mdrduncommon26",
+      "electric-mining-drill-mdrduncommonQ"
+    ],
+    [
+      "electric-mining-drill-mdrduncommon27",
+      "electric-mining-drill-mdrduncommonR"
+    ],
+    [
+      "electric-mining-drill-mdrduncommon28",
+      "electric-mining-drill-mdrduncommonS"
+    ],
+    [
+      "electric-mining-drill-mdrduncommon29",
+      "electric-mining-drill-mdrduncommonT"
+    ],
+    [
+      "electric-mining-drill-mdrduncommon30",
+      "electric-mining-drill-mdrduncommonU"
+    ],
+
+    ["electric-mining-drill-mdrdrare10", "electric-mining-drill-mdrdrareA"],
+    ["electric-mining-drill-mdrdrare11", "electric-mining-drill-mdrdrareB"],
+    ["electric-mining-drill-mdrdrare12", "electric-mining-drill-mdrdrareC"],
+    ["electric-mining-drill-mdrdrare13", "electric-mining-drill-mdrdrareD"],
+    ["electric-mining-drill-mdrdrare14", "electric-mining-drill-mdrdrareE"],
+    ["electric-mining-drill-mdrdrare15", "electric-mining-drill-mdrdrareF"],
+    ["electric-mining-drill-mdrdrare16", "electric-mining-drill-mdrdrareG"],
+    ["electric-mining-drill-mdrdrare17", "electric-mining-drill-mdrdrareH"],
+    ["electric-mining-drill-mdrdrare18", "electric-mining-drill-mdrdrareI"],
+    ["electric-mining-drill-mdrdrare19", "electric-mining-drill-mdrdrareJ"],
+    ["electric-mining-drill-mdrdrare20", "electric-mining-drill-mdrdrareK"],
+    ["electric-mining-drill-mdrdrare21", "electric-mining-drill-mdrdrareL"],
+    ["electric-mining-drill-mdrdrare22", "electric-mining-drill-mdrdrareM"],
+    ["electric-mining-drill-mdrdrare23", "electric-mining-drill-mdrdrareN"],
+    ["electric-mining-drill-mdrdrare24", "electric-mining-drill-mdrdrareO"],
+    ["electric-mining-drill-mdrdrare25", "electric-mining-drill-mdrdrareP"],
+    ["electric-mining-drill-mdrdrare26", "electric-mining-drill-mdrdrareQ"],
+    ["electric-mining-drill-mdrdrare27", "electric-mining-drill-mdrdrareR"],
+    ["electric-mining-drill-mdrdrare28", "electric-mining-drill-mdrdrareS"],
+    ["electric-mining-drill-mdrdrare29", "electric-mining-drill-mdrdrareT"],
+    ["electric-mining-drill-mdrdrare30", "electric-mining-drill-mdrdrareU"],
+
+    ["electric-mining-drill-mdrdepic10", "electric-mining-drill-mdrdepicA"],
+    ["electric-mining-drill-mdrdepic11", "electric-mining-drill-mdrdepicB"],
+    ["electric-mining-drill-mdrdepic12", "electric-mining-drill-mdrdepicC"],
+    ["electric-mining-drill-mdrdepic13", "electric-mining-drill-mdrdepicD"],
+    ["electric-mining-drill-mdrdepic14", "electric-mining-drill-mdrdepicE"],
+    ["electric-mining-drill-mdrdepic15", "electric-mining-drill-mdrdepicF"],
+    ["electric-mining-drill-mdrdepic16", "electric-mining-drill-mdrdepicG"],
+    ["electric-mining-drill-mdrdepic17", "electric-mining-drill-mdrdepicH"],
+    ["electric-mining-drill-mdrdepic18", "electric-mining-drill-mdrdepicI"],
+    ["electric-mining-drill-mdrdepic19", "electric-mining-drill-mdrdepicJ"],
+    ["electric-mining-drill-mdrdepic20", "electric-mining-drill-mdrdepicK"],
+    ["electric-mining-drill-mdrdepic21", "electric-mining-drill-mdrdepicL"],
+    ["electric-mining-drill-mdrdepic22", "electric-mining-drill-mdrdepicM"],
+    ["electric-mining-drill-mdrdepic23", "electric-mining-drill-mdrdepicN"],
+    ["electric-mining-drill-mdrdepic24", "electric-mining-drill-mdrdepicO"],
+    ["electric-mining-drill-mdrdepic25", "electric-mining-drill-mdrdepicP"],
+    ["electric-mining-drill-mdrdepic26", "electric-mining-drill-mdrdepicQ"],
+    ["electric-mining-drill-mdrdepic27", "electric-mining-drill-mdrdepicR"],
+    ["electric-mining-drill-mdrdepic28", "electric-mining-drill-mdrdepicS"],
+    ["electric-mining-drill-mdrdepic29", "electric-mining-drill-mdrdepicT"],
+    ["electric-mining-drill-mdrdepic30", "electric-mining-drill-mdrdepicU"],
+
+    [
+      "electric-mining-drill-mdrdlegendary10",
+      "electric-mining-drill-mdrdlegendaryA"
+    ],
+    [
+      "electric-mining-drill-mdrdlegendary11",
+      "electric-mining-drill-mdrdlegendaryB"
+    ],
+    [
+      "electric-mining-drill-mdrdlegendary12",
+      "electric-mining-drill-mdrdlegendaryC"
+    ],
+    [
+      "electric-mining-drill-mdrdlegendary13",
+      "electric-mining-drill-mdrdlegendaryD"
+    ],
+    [
+      "electric-mining-drill-mdrdlegendary14",
+      "electric-mining-drill-mdrdlegendaryE"
+    ],
+    [
+      "electric-mining-drill-mdrdlegendary15",
+      "electric-mining-drill-mdrdlegendaryF"
+    ],
+    [
+      "electric-mining-drill-mdrdlegendary16",
+      "electric-mining-drill-mdrdlegendaryG"
+    ],
+    [
+      "electric-mining-drill-mdrdlegendary17",
+      "electric-mining-drill-mdrdlegendaryH"
+    ],
+    [
+      "electric-mining-drill-mdrdlegendary18",
+      "electric-mining-drill-mdrdlegendaryI"
+    ],
+    [
+      "electric-mining-drill-mdrdlegendary19",
+      "electric-mining-drill-mdrdlegendaryJ"
+    ],
+    [
+      "electric-mining-drill-mdrdlegendary20",
+      "electric-mining-drill-mdrdlegendaryK"
+    ],
+    [
+      "electric-mining-drill-mdrdlegendary21",
+      "electric-mining-drill-mdrdlegendaryL"
+    ],
+    [
+      "electric-mining-drill-mdrdlegendary22",
+      "electric-mining-drill-mdrdlegendaryM"
+    ],
+    [
+      "electric-mining-drill-mdrdlegendary23",
+      "electric-mining-drill-mdrdlegendaryN"
+    ],
+    [
+      "electric-mining-drill-mdrdlegendary24",
+      "electric-mining-drill-mdrdlegendaryO"
+    ],
+    [
+      "electric-mining-drill-mdrdlegendary25",
+      "electric-mining-drill-mdrdlegendaryP"
+    ],
+    [
+      "electric-mining-drill-mdrdlegendary26",
+      "electric-mining-drill-mdrdlegendaryQ"
+    ],
+    [
+      "electric-mining-drill-mdrdlegendary27",
+      "electric-mining-drill-mdrdlegendaryR"
+    ],
+    [
+      "electric-mining-drill-mdrdlegendary28",
+      "electric-mining-drill-mdrdlegendaryS"
+    ],
+    [
+      "electric-mining-drill-mdrdlegendary29",
+      "electric-mining-drill-mdrdlegendaryT"
+    ],
+    [
+      "electric-mining-drill-mdrdlegendary30",
+      "electric-mining-drill-mdrdlegendaryU"
+    ],
+
+    ["big-mining-drill-mdrdnormal10", "big-mining-drill-mdrdnormalA"],
+    ["big-mining-drill-mdrdnormal11", "big-mining-drill-mdrdnormalB"],
+    ["big-mining-drill-mdrdnormal12", "big-mining-drill-mdrdnormalC"],
+    ["big-mining-drill-mdrdnormal13", "big-mining-drill-mdrdnormalD"],
+    ["big-mining-drill-mdrdnormal14", "big-mining-drill-mdrdnormalE"],
+    ["big-mining-drill-mdrdnormal15", "big-mining-drill-mdrdnormalF"],
+    ["big-mining-drill-mdrdnormal16", "big-mining-drill-mdrdnormalG"],
+    ["big-mining-drill-mdrdnormal17", "big-mining-drill-mdrdnormalH"],
+    ["big-mining-drill-mdrdnormal18", "big-mining-drill-mdrdnormalI"],
+    ["big-mining-drill-mdrdnormal19", "big-mining-drill-mdrdnormalJ"],
+    ["big-mining-drill-mdrdnormal20", "big-mining-drill-mdrdnormalK"],
+    ["big-mining-drill-mdrdnormal21", "big-mining-drill-mdrdnormalL"],
+    ["big-mining-drill-mdrdnormal22", "big-mining-drill-mdrdnormalM"],
+    ["big-mining-drill-mdrdnormal23", "big-mining-drill-mdrdnormalN"],
+    ["big-mining-drill-mdrdnormal24", "big-mining-drill-mdrdnormalO"],
+    ["big-mining-drill-mdrdnormal25", "big-mining-drill-mdrdnormalP"],
+    ["big-mining-drill-mdrdnormal26", "big-mining-drill-mdrdnormalQ"],
+    ["big-mining-drill-mdrdnormal27", "big-mining-drill-mdrdnormalR"],
+    ["big-mining-drill-mdrdnormal28", "big-mining-drill-mdrdnormalS"],
+    ["big-mining-drill-mdrdnormal29", "big-mining-drill-mdrdnormalT"],
+    ["big-mining-drill-mdrdnormal30", "big-mining-drill-mdrdnormalU"],
+
+    ["big-mining-drill-mdrduncommon10", "big-mining-drill-mdrduncommonA"],
+    ["big-mining-drill-mdrduncommon11", "big-mining-drill-mdrduncommonB"],
+    ["big-mining-drill-mdrduncommon12", "big-mining-drill-mdrduncommonC"],
+    ["big-mining-drill-mdrduncommon13", "big-mining-drill-mdrduncommonD"],
+    ["big-mining-drill-mdrduncommon14", "big-mining-drill-mdrduncommonE"],
+    ["big-mining-drill-mdrduncommon15", "big-mining-drill-mdrduncommonF"],
+    ["big-mining-drill-mdrduncommon16", "big-mining-drill-mdrduncommonG"],
+    ["big-mining-drill-mdrduncommon17", "big-mining-drill-mdrduncommonH"],
+    ["big-mining-drill-mdrduncommon18", "big-mining-drill-mdrduncommonI"],
+    ["big-mining-drill-mdrduncommon19", "big-mining-drill-mdrduncommonJ"],
+    ["big-mining-drill-mdrduncommon20", "big-mining-drill-mdrduncommonK"],
+    ["big-mining-drill-mdrduncommon21", "big-mining-drill-mdrduncommonL"],
+    ["big-mining-drill-mdrduncommon22", "big-mining-drill-mdrduncommonM"],
+    ["big-mining-drill-mdrduncommon23", "big-mining-drill-mdrduncommonN"],
+    ["big-mining-drill-mdrduncommon24", "big-mining-drill-mdrduncommonO"],
+    ["big-mining-drill-mdrduncommon25", "big-mining-drill-mdrduncommonP"],
+    ["big-mining-drill-mdrduncommon26", "big-mining-drill-mdrduncommonQ"],
+    ["big-mining-drill-mdrduncommon27", "big-mining-drill-mdrduncommonR"],
+    ["big-mining-drill-mdrduncommon28", "big-mining-drill-mdrduncommonS"],
+    ["big-mining-drill-mdrduncommon29", "big-mining-drill-mdrduncommonT"],
+    ["big-mining-drill-mdrduncommon30", "big-mining-drill-mdrduncommonU"],
+
+    ["big-mining-drill-mdrdrare10", "big-mining-drill-mdrdrareA"],
+    ["big-mining-drill-mdrdrare11", "big-mining-drill-mdrdrareB"],
+    ["big-mining-drill-mdrdrare12", "big-mining-drill-mdrdrareC"],
+    ["big-mining-drill-mdrdrare13", "big-mining-drill-mdrdrareD"],
+    ["big-mining-drill-mdrdrare14", "big-mining-drill-mdrdrareE"],
+    ["big-mining-drill-mdrdrare15", "big-mining-drill-mdrdrareF"],
+    ["big-mining-drill-mdrdrare16", "big-mining-drill-mdrdrareG"],
+    ["big-mining-drill-mdrdrare17", "big-mining-drill-mdrdrareH"],
+    ["big-mining-drill-mdrdrare18", "big-mining-drill-mdrdrareI"],
+    ["big-mining-drill-mdrdrare19", "big-mining-drill-mdrdrareJ"],
+    ["big-mining-drill-mdrdrare20", "big-mining-drill-mdrdrareK"],
+    ["big-mining-drill-mdrdrare21", "big-mining-drill-mdrdrareL"],
+    ["big-mining-drill-mdrdrare22", "big-mining-drill-mdrdrareM"],
+    ["big-mining-drill-mdrdrare23", "big-mining-drill-mdrdrareN"],
+    ["big-mining-drill-mdrdrare24", "big-mining-drill-mdrdrareO"],
+    ["big-mining-drill-mdrdrare25", "big-mining-drill-mdrdrareP"],
+    ["big-mining-drill-mdrdrare26", "big-mining-drill-mdrdrareQ"],
+    ["big-mining-drill-mdrdrare27", "big-mining-drill-mdrdrareR"],
+    ["big-mining-drill-mdrdrare28", "big-mining-drill-mdrdrareS"],
+    ["big-mining-drill-mdrdrare29", "big-mining-drill-mdrdrareT"],
+    ["big-mining-drill-mdrdrare30", "big-mining-drill-mdrdrareU"],
+
+    ["big-mining-drill-mdrdepic10", "big-mining-drill-mdrdepicA"],
+    ["big-mining-drill-mdrdepic11", "big-mining-drill-mdrdepicB"],
+    ["big-mining-drill-mdrdepic12", "big-mining-drill-mdrdepicC"],
+    ["big-mining-drill-mdrdepic13", "big-mining-drill-mdrdepicD"],
+    ["big-mining-drill-mdrdepic14", "big-mining-drill-mdrdepicE"],
+    ["big-mining-drill-mdrdepic15", "big-mining-drill-mdrdepicF"],
+    ["big-mining-drill-mdrdepic16", "big-mining-drill-mdrdepicG"],
+    ["big-mining-drill-mdrdepic17", "big-mining-drill-mdrdepicH"],
+    ["big-mining-drill-mdrdepic18", "big-mining-drill-mdrdepicI"],
+    ["big-mining-drill-mdrdepic19", "big-mining-drill-mdrdepicJ"],
+    ["big-mining-drill-mdrdepic20", "big-mining-drill-mdrdepicK"],
+    ["big-mining-drill-mdrdepic21", "big-mining-drill-mdrdepicL"],
+    ["big-mining-drill-mdrdepic22", "big-mining-drill-mdrdepicM"],
+    ["big-mining-drill-mdrdepic23", "big-mining-drill-mdrdepicN"],
+    ["big-mining-drill-mdrdepic24", "big-mining-drill-mdrdepicO"],
+    ["big-mining-drill-mdrdepic25", "big-mining-drill-mdrdepicP"],
+    ["big-mining-drill-mdrdepic26", "big-mining-drill-mdrdepicQ"],
+    ["big-mining-drill-mdrdepic27", "big-mining-drill-mdrdepicR"],
+    ["big-mining-drill-mdrdepic28", "big-mining-drill-mdrdepicS"],
+    ["big-mining-drill-mdrdepic29", "big-mining-drill-mdrdepicT"],
+    ["big-mining-drill-mdrdepic30", "big-mining-drill-mdrdepicU"],
+
+    ["big-mining-drill-mdrdlegendary10", "big-mining-drill-mdrdlegendaryA"],
+    ["big-mining-drill-mdrdlegendary11", "big-mining-drill-mdrdlegendaryB"],
+    ["big-mining-drill-mdrdlegendary12", "big-mining-drill-mdrdlegendaryC"],
+    ["big-mining-drill-mdrdlegendary13", "big-mining-drill-mdrdlegendaryD"],
+    ["big-mining-drill-mdrdlegendary14", "big-mining-drill-mdrdlegendaryE"],
+    ["big-mining-drill-mdrdlegendary15", "big-mining-drill-mdrdlegendaryF"],
+    ["big-mining-drill-mdrdlegendary16", "big-mining-drill-mdrdlegendaryG"],
+    ["big-mining-drill-mdrdlegendary17", "big-mining-drill-mdrdlegendaryH"],
+    ["big-mining-drill-mdrdlegendary18", "big-mining-drill-mdrdlegendaryI"],
+    ["big-mining-drill-mdrdlegendary19", "big-mining-drill-mdrdlegendaryJ"],
+    ["big-mining-drill-mdrdlegendary20", "big-mining-drill-mdrdlegendaryK"],
+    ["big-mining-drill-mdrdlegendary21", "big-mining-drill-mdrdlegendaryL"],
+    ["big-mining-drill-mdrdlegendary22", "big-mining-drill-mdrdlegendaryM"],
+    ["big-mining-drill-mdrdlegendary23", "big-mining-drill-mdrdlegendaryN"],
+    ["big-mining-drill-mdrdlegendary24", "big-mining-drill-mdrdlegendaryO"],
+    ["big-mining-drill-mdrdlegendary25", "big-mining-drill-mdrdlegendaryP"],
+    ["big-mining-drill-mdrdlegendary26", "big-mining-drill-mdrdlegendaryQ"],
+    ["big-mining-drill-mdrdlegendary27", "big-mining-drill-mdrdlegendaryR"],
+    ["big-mining-drill-mdrdlegendary28", "big-mining-drill-mdrdlegendaryS"],
+    ["big-mining-drill-mdrdlegendary29", "big-mining-drill-mdrdlegendaryT"],
+    ["big-mining-drill-mdrdlegendary30", "big-mining-drill-mdrdlegendaryU"],
+
+    ["burner-mining-drill-mdrdnormal10", "burner-mining-drill-mdrdnormalA"],
+    ["burner-mining-drill-mdrdnormal11", "burner-mining-drill-mdrdnormalB"],
+    ["burner-mining-drill-mdrdnormal12", "burner-mining-drill-mdrdnormalC"],
+    ["burner-mining-drill-mdrdnormal13", "burner-mining-drill-mdrdnormalD"],
+    ["burner-mining-drill-mdrdnormal14", "burner-mining-drill-mdrdnormalE"],
+    ["burner-mining-drill-mdrdnormal15", "burner-mining-drill-mdrdnormalF"],
+    ["burner-mining-drill-mdrdnormal16", "burner-mining-drill-mdrdnormalG"],
+    ["burner-mining-drill-mdrdnormal17", "burner-mining-drill-mdrdnormalH"],
+    ["burner-mining-drill-mdrdnormal18", "burner-mining-drill-mdrdnormalI"],
+    ["burner-mining-drill-mdrdnormal19", "burner-mining-drill-mdrdnormalJ"],
+    ["burner-mining-drill-mdrdnormal20", "burner-mining-drill-mdrdnormalK"],
+    ["burner-mining-drill-mdrdnormal21", "burner-mining-drill-mdrdnormalL"],
+    ["burner-mining-drill-mdrdnormal22", "burner-mining-drill-mdrdnormalM"],
+    ["burner-mining-drill-mdrdnormal23", "burner-mining-drill-mdrdnormalN"],
+    ["burner-mining-drill-mdrdnormal24", "burner-mining-drill-mdrdnormalO"],
+    ["burner-mining-drill-mdrdnormal25", "burner-mining-drill-mdrdnormalP"],
+    ["burner-mining-drill-mdrdnormal26", "burner-mining-drill-mdrdnormalQ"],
+    ["burner-mining-drill-mdrdnormal27", "burner-mining-drill-mdrdnormalR"],
+    ["burner-mining-drill-mdrdnormal28", "burner-mining-drill-mdrdnormalS"],
+    ["burner-mining-drill-mdrdnormal29", "burner-mining-drill-mdrdnormalT"],
+    ["burner-mining-drill-mdrdnormal30", "burner-mining-drill-mdrdnormalU"],
+
+    ["burner-mining-drill-mdrduncommon10", "burner-mining-drill-mdrduncommonA"],
+    ["burner-mining-drill-mdrduncommon11", "burner-mining-drill-mdrduncommonB"],
+    ["burner-mining-drill-mdrduncommon12", "burner-mining-drill-mdrduncommonC"],
+    ["burner-mining-drill-mdrduncommon13", "burner-mining-drill-mdrduncommonD"],
+    ["burner-mining-drill-mdrduncommon14", "burner-mining-drill-mdrduncommonE"],
+    ["burner-mining-drill-mdrduncommon15", "burner-mining-drill-mdrduncommonF"],
+    ["burner-mining-drill-mdrduncommon16", "burner-mining-drill-mdrduncommonG"],
+    ["burner-mining-drill-mdrduncommon17", "burner-mining-drill-mdrduncommonH"],
+    ["burner-mining-drill-mdrduncommon18", "burner-mining-drill-mdrduncommonI"],
+    ["burner-mining-drill-mdrduncommon19", "burner-mining-drill-mdrduncommonJ"],
+    ["burner-mining-drill-mdrduncommon20", "burner-mining-drill-mdrduncommonK"],
+    ["burner-mining-drill-mdrduncommon21", "burner-mining-drill-mdrduncommonL"],
+    ["burner-mining-drill-mdrduncommon22", "burner-mining-drill-mdrduncommonM"],
+    ["burner-mining-drill-mdrduncommon23", "burner-mining-drill-mdrduncommonN"],
+    ["burner-mining-drill-mdrduncommon24", "burner-mining-drill-mdrduncommonO"],
+    ["burner-mining-drill-mdrduncommon25", "burner-mining-drill-mdrduncommonP"],
+    ["burner-mining-drill-mdrduncommon26", "burner-mining-drill-mdrduncommonQ"],
+    ["burner-mining-drill-mdrduncommon27", "burner-mining-drill-mdrduncommonR"],
+    ["burner-mining-drill-mdrduncommon28", "burner-mining-drill-mdrduncommonS"],
+    ["burner-mining-drill-mdrduncommon29", "burner-mining-drill-mdrduncommonT"],
+    ["burner-mining-drill-mdrduncommon30", "burner-mining-drill-mdrduncommonU"],
+
+    ["burner-mining-drill-mdrdrare10", "burner-mining-drill-mdrdrareA"],
+    ["burner-mining-drill-mdrdrare11", "burner-mining-drill-mdrdrareB"],
+    ["burner-mining-drill-mdrdrare12", "burner-mining-drill-mdrdrareC"],
+    ["burner-mining-drill-mdrdrare13", "burner-mining-drill-mdrdrareD"],
+    ["burner-mining-drill-mdrdrare14", "burner-mining-drill-mdrdrareE"],
+    ["burner-mining-drill-mdrdrare15", "burner-mining-drill-mdrdrareF"],
+    ["burner-mining-drill-mdrdrare16", "burner-mining-drill-mdrdrareG"],
+    ["burner-mining-drill-mdrdrare17", "burner-mining-drill-mdrdrareH"],
+    ["burner-mining-drill-mdrdrare18", "burner-mining-drill-mdrdrareI"],
+    ["burner-mining-drill-mdrdrare19", "burner-mining-drill-mdrdrareJ"],
+    ["burner-mining-drill-mdrdrare20", "burner-mining-drill-mdrdrareK"],
+    ["burner-mining-drill-mdrdrare21", "burner-mining-drill-mdrdrareL"],
+    ["burner-mining-drill-mdrdrare22", "burner-mining-drill-mdrdrareM"],
+    ["burner-mining-drill-mdrdrare23", "burner-mining-drill-mdrdrareN"],
+    ["burner-mining-drill-mdrdrare24", "burner-mining-drill-mdrdrareO"],
+    ["burner-mining-drill-mdrdrare25", "burner-mining-drill-mdrdrareP"],
+    ["burner-mining-drill-mdrdrare26", "burner-mining-drill-mdrdrareQ"],
+    ["burner-mining-drill-mdrdrare27", "burner-mining-drill-mdrdrareR"],
+    ["burner-mining-drill-mdrdrare28", "burner-mining-drill-mdrdrareS"],
+    ["burner-mining-drill-mdrdrare29", "burner-mining-drill-mdrdrareT"],
+    ["burner-mining-drill-mdrdrare30", "burner-mining-drill-mdrdrareU"],
+
+    ["burner-mining-drill-mdrdepic10", "burner-mining-drill-mdrdepicA"],
+    ["burner-mining-drill-mdrdepic11", "burner-mining-drill-mdrdepicB"],
+    ["burner-mining-drill-mdrdepic12", "burner-mining-drill-mdrdepicC"],
+    ["burner-mining-drill-mdrdepic13", "burner-mining-drill-mdrdepicD"],
+    ["burner-mining-drill-mdrdepic14", "burner-mining-drill-mdrdepicE"],
+    ["burner-mining-drill-mdrdepic15", "burner-mining-drill-mdrdepicF"],
+    ["burner-mining-drill-mdrdepic16", "burner-mining-drill-mdrdepicG"],
+    ["burner-mining-drill-mdrdepic17", "burner-mining-drill-mdrdepicH"],
+    ["burner-mining-drill-mdrdepic18", "burner-mining-drill-mdrdepicI"],
+    ["burner-mining-drill-mdrdepic19", "burner-mining-drill-mdrdepicJ"],
+    ["burner-mining-drill-mdrdepic20", "burner-mining-drill-mdrdepicK"],
+    ["burner-mining-drill-mdrdepic21", "burner-mining-drill-mdrdepicL"],
+    ["burner-mining-drill-mdrdepic22", "burner-mining-drill-mdrdepicM"],
+    ["burner-mining-drill-mdrdepic23", "burner-mining-drill-mdrdepicN"],
+    ["burner-mining-drill-mdrdepic24", "burner-mining-drill-mdrdepicO"],
+    ["burner-mining-drill-mdrdepic25", "burner-mining-drill-mdrdepicP"],
+    ["burner-mining-drill-mdrdepic26", "burner-mining-drill-mdrdepicQ"],
+    ["burner-mining-drill-mdrdepic27", "burner-mining-drill-mdrdepicR"],
+    ["burner-mining-drill-mdrdepic28", "burner-mining-drill-mdrdepicS"],
+    ["burner-mining-drill-mdrdepic29", "burner-mining-drill-mdrdepicT"],
+    ["burner-mining-drill-mdrdepic30", "burner-mining-drill-mdrdepicU"],
+
+    [
+      "burner-mining-drill-mdrdlegendary10",
+      "burner-mining-drill-mdrdlegendaryA"
+    ],
+    [
+      "burner-mining-drill-mdrdlegendary11",
+      "burner-mining-drill-mdrdlegendaryB"
+    ],
+    [
+      "burner-mining-drill-mdrdlegendary12",
+      "burner-mining-drill-mdrdlegendaryC"
+    ],
+    [
+      "burner-mining-drill-mdrdlegendary13",
+      "burner-mining-drill-mdrdlegendaryD"
+    ],
+    [
+      "burner-mining-drill-mdrdlegendary14",
+      "burner-mining-drill-mdrdlegendaryE"
+    ],
+    [
+      "burner-mining-drill-mdrdlegendary15",
+      "burner-mining-drill-mdrdlegendaryF"
+    ],
+    [
+      "burner-mining-drill-mdrdlegendary16",
+      "burner-mining-drill-mdrdlegendaryG"
+    ],
+    [
+      "burner-mining-drill-mdrdlegendary17",
+      "burner-mining-drill-mdrdlegendaryH"
+    ],
+    [
+      "burner-mining-drill-mdrdlegendary18",
+      "burner-mining-drill-mdrdlegendaryI"
+    ],
+    [
+      "burner-mining-drill-mdrdlegendary19",
+      "burner-mining-drill-mdrdlegendaryJ"
+    ],
+    [
+      "burner-mining-drill-mdrdlegendary20",
+      "burner-mining-drill-mdrdlegendaryK"
+    ],
+    [
+      "burner-mining-drill-mdrdlegendary21",
+      "burner-mining-drill-mdrdlegendaryL"
+    ],
+    [
+      "burner-mining-drill-mdrdlegendary22",
+      "burner-mining-drill-mdrdlegendaryM"
+    ],
+    [
+      "burner-mining-drill-mdrdlegendary23",
+      "burner-mining-drill-mdrdlegendaryN"
+    ],
+    [
+      "burner-mining-drill-mdrdlegendary24",
+      "burner-mining-drill-mdrdlegendaryO"
+    ],
+    [
+      "burner-mining-drill-mdrdlegendary25",
+      "burner-mining-drill-mdrdlegendaryP"
+    ],
+    [
+      "burner-mining-drill-mdrdlegendary26",
+      "burner-mining-drill-mdrdlegendaryQ"
+    ],
+    [
+      "burner-mining-drill-mdrdlegendary27",
+      "burner-mining-drill-mdrdlegendaryR"
+    ],
+    [
+      "burner-mining-drill-mdrdlegendary28",
+      "burner-mining-drill-mdrdlegendaryS"
+    ],
+    [
+      "burner-mining-drill-mdrdlegendary29",
+      "burner-mining-drill-mdrdlegendaryT"
+    ],
+    [
+      "burner-mining-drill-mdrdlegendary30",
+      "burner-mining-drill-mdrdlegendaryU"
+    ],
+    ["pumpjack-mdrdnormal10", "pumpjack-mdrdnormalA"],
+    ["pumpjack-mdrdnormal11", "pumpjack-mdrdnormalB"],
+    ["pumpjack-mdrdnormal12", "pumpjack-mdrdnormalC"],
+    ["pumpjack-mdrdnormal13", "pumpjack-mdrdnormalD"],
+    ["pumpjack-mdrdnormal14", "pumpjack-mdrdnormalE"],
+    ["pumpjack-mdrdnormal15", "pumpjack-mdrdnormalF"],
+    ["pumpjack-mdrdnormal16", "pumpjack-mdrdnormalG"],
+    ["pumpjack-mdrdnormal17", "pumpjack-mdrdnormalH"],
+    ["pumpjack-mdrdnormal18", "pumpjack-mdrdnormalI"],
+    ["pumpjack-mdrdnormal19", "pumpjack-mdrdnormalJ"],
+    ["pumpjack-mdrdnormal20", "pumpjack-mdrdnormalK"],
+    ["pumpjack-mdrdnormal21", "pumpjack-mdrdnormalL"],
+    ["pumpjack-mdrdnormal22", "pumpjack-mdrdnormalM"],
+    ["pumpjack-mdrdnormal23", "pumpjack-mdrdnormalN"],
+    ["pumpjack-mdrdnormal24", "pumpjack-mdrdnormalO"],
+    ["pumpjack-mdrdnormal25", "pumpjack-mdrdnormalP"],
+    ["pumpjack-mdrdnormal26", "pumpjack-mdrdnormalQ"],
+    ["pumpjack-mdrdnormal27", "pumpjack-mdrdnormalR"],
+    ["pumpjack-mdrdnormal28", "pumpjack-mdrdnormalS"],
+    ["pumpjack-mdrdnormal29", "pumpjack-mdrdnormalT"],
+    ["pumpjack-mdrdnormal30", "pumpjack-mdrdnormalU"],
+
+    ["pumpjack-mdrduncommon10", "pumpjack-mdrduncommonA"],
+    ["pumpjack-mdrduncommon11", "pumpjack-mdrduncommonB"],
+    ["pumpjack-mdrduncommon12", "pumpjack-mdrduncommonC"],
+    ["pumpjack-mdrduncommon13", "pumpjack-mdrduncommonD"],
+    ["pumpjack-mdrduncommon14", "pumpjack-mdrduncommonE"],
+    ["pumpjack-mdrduncommon15", "pumpjack-mdrduncommonF"],
+    ["pumpjack-mdrduncommon16", "pumpjack-mdrduncommonG"],
+    ["pumpjack-mdrduncommon17", "pumpjack-mdrduncommonH"],
+    ["pumpjack-mdrduncommon18", "pumpjack-mdrduncommonI"],
+    ["pumpjack-mdrduncommon19", "pumpjack-mdrduncommonJ"],
+    ["pumpjack-mdrduncommon20", "pumpjack-mdrduncommonK"],
+    ["pumpjack-mdrduncommon21", "pumpjack-mdrduncommonL"],
+    ["pumpjack-mdrduncommon22", "pumpjack-mdrduncommonM"],
+    ["pumpjack-mdrduncommon23", "pumpjack-mdrduncommonN"],
+    ["pumpjack-mdrduncommon24", "pumpjack-mdrduncommonO"],
+    ["pumpjack-mdrduncommon25", "pumpjack-mdrduncommonP"],
+    ["pumpjack-mdrduncommon26", "pumpjack-mdrduncommonQ"],
+    ["pumpjack-mdrduncommon27", "pumpjack-mdrduncommonR"],
+    ["pumpjack-mdrduncommon28", "pumpjack-mdrduncommonS"],
+    ["pumpjack-mdrduncommon29", "pumpjack-mdrduncommonT"],
+    ["pumpjack-mdrduncommon30", "pumpjack-mdrduncommonU"],
+
+    ["pumpjack-mdrdrare10", "pumpjack-mdrdrareA"],
+    ["pumpjack-mdrdrare11", "pumpjack-mdrdrareB"],
+    ["pumpjack-mdrdrare12", "pumpjack-mdrdrareC"],
+    ["pumpjack-mdrdrare13", "pumpjack-mdrdrareD"],
+    ["pumpjack-mdrdrare14", "pumpjack-mdrdrareE"],
+    ["pumpjack-mdrdrare15", "pumpjack-mdrdrareF"],
+    ["pumpjack-mdrdrare16", "pumpjack-mdrdrareG"],
+    ["pumpjack-mdrdrare17", "pumpjack-mdrdrareH"],
+    ["pumpjack-mdrdrare18", "pumpjack-mdrdrareI"],
+    ["pumpjack-mdrdrare19", "pumpjack-mdrdrareJ"],
+    ["pumpjack-mdrdrare20", "pumpjack-mdrdrareK"],
+    ["pumpjack-mdrdrare21", "pumpjack-mdrdrareL"],
+    ["pumpjack-mdrdrare22", "pumpjack-mdrdrareM"],
+    ["pumpjack-mdrdrare23", "pumpjack-mdrdrareN"],
+    ["pumpjack-mdrdrare24", "pumpjack-mdrdrareO"],
+    ["pumpjack-mdrdrare25", "pumpjack-mdrdrareP"],
+    ["pumpjack-mdrdrare26", "pumpjack-mdrdrareQ"],
+    ["pumpjack-mdrdrare27", "pumpjack-mdrdrareR"],
+    ["pumpjack-mdrdrare28", "pumpjack-mdrdrareS"],
+    ["pumpjack-mdrdrare29", "pumpjack-mdrdrareT"],
+    ["pumpjack-mdrdrare30", "pumpjack-mdrdrareU"],
+
+    ["pumpjack-mdrdepic10", "pumpjack-mdrdepicA"],
+    ["pumpjack-mdrdepic11", "pumpjack-mdrdepicB"],
+    ["pumpjack-mdrdepic12", "pumpjack-mdrdepicC"],
+    ["pumpjack-mdrdepic13", "pumpjack-mdrdepicD"],
+    ["pumpjack-mdrdepic14", "pumpjack-mdrdepicE"],
+    ["pumpjack-mdrdepic15", "pumpjack-mdrdepicF"],
+    ["pumpjack-mdrdepic16", "pumpjack-mdrdepicG"],
+    ["pumpjack-mdrdepic17", "pumpjack-mdrdepicH"],
+    ["pumpjack-mdrdepic18", "pumpjack-mdrdepicI"],
+    ["pumpjack-mdrdepic19", "pumpjack-mdrdepicJ"],
+    ["pumpjack-mdrdepic20", "pumpjack-mdrdepicK"],
+    ["pumpjack-mdrdepic21", "pumpjack-mdrdepicL"],
+    ["pumpjack-mdrdepic22", "pumpjack-mdrdepicM"],
+    ["pumpjack-mdrdepic23", "pumpjack-mdrdepicN"],
+    ["pumpjack-mdrdepic24", "pumpjack-mdrdepicO"],
+    ["pumpjack-mdrdepic25", "pumpjack-mdrdepicP"],
+    ["pumpjack-mdrdepic26", "pumpjack-mdrdepicQ"],
+    ["pumpjack-mdrdepic27", "pumpjack-mdrdepicR"],
+    ["pumpjack-mdrdepic28", "pumpjack-mdrdepicS"],
+    ["pumpjack-mdrdepic29", "pumpjack-mdrdepicT"],
+    ["pumpjack-mdrdepic30", "pumpjack-mdrdepicU"],
+
+    ["pumpjack-mdrdlegendary10", "pumpjack-mdrdlegendaryA"],
+    ["pumpjack-mdrdlegendary11", "pumpjack-mdrdlegendaryB"],
+    ["pumpjack-mdrdlegendary12", "pumpjack-mdrdlegendaryC"],
+    ["pumpjack-mdrdlegendary13", "pumpjack-mdrdlegendaryD"],
+    ["pumpjack-mdrdlegendary14", "pumpjack-mdrdlegendaryE"],
+    ["pumpjack-mdrdlegendary15", "pumpjack-mdrdlegendaryF"],
+    ["pumpjack-mdrdlegendary16", "pumpjack-mdrdlegendaryG"],
+    ["pumpjack-mdrdlegendary17", "pumpjack-mdrdlegendaryH"],
+    ["pumpjack-mdrdlegendary18", "pumpjack-mdrdlegendaryI"],
+    ["pumpjack-mdrdlegendary19", "pumpjack-mdrdlegendaryJ"],
+    ["pumpjack-mdrdlegendary20", "pumpjack-mdrdlegendaryK"],
+    ["pumpjack-mdrdlegendary21", "pumpjack-mdrdlegendaryL"],
+    ["pumpjack-mdrdlegendary22", "pumpjack-mdrdlegendaryM"],
+    ["pumpjack-mdrdlegendary23", "pumpjack-mdrdlegendaryN"],
+    ["pumpjack-mdrdlegendary24", "pumpjack-mdrdlegendaryO"],
+    ["pumpjack-mdrdlegendary25", "pumpjack-mdrdlegendaryP"],
+    ["pumpjack-mdrdlegendary26", "pumpjack-mdrdlegendaryQ"],
+    ["pumpjack-mdrdlegendary27", "pumpjack-mdrdlegendaryR"],
+    ["pumpjack-mdrdlegendary28", "pumpjack-mdrdlegendaryS"],
+    ["pumpjack-mdrdlegendary29", "pumpjack-mdrdlegendaryT"],
+    ["pumpjack-mdrdlegendary30", "pumpjack-mdrdlegendaryU"]
+  ]
+}
