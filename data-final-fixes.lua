@@ -159,6 +159,7 @@ for level = 1, level_max do
         hidden_mining_drill.placeable_by = { item = name, count = 1 }
         hidden_mining_drill.localised_name = { "entity-name." .. name }
         hidden_mining_drill.localised_description = { "entity-description." .. name }
+
         hidden_mining_drill.name = hidden_mining_drill.name .. "-mdrd" .. quality_name .. level
         local rdrp = hidden_mining_drill.resource_drain_rate_percent or 100
         local new_rdrp = rdrp - ((rdrp / level_max) * level)
@@ -167,6 +168,8 @@ for level = 1, level_max do
         end
         hidden_mining_drill.resource_drain_rate_percent = new_rdrp
         hidden_mining_drill.mining_speed = hidden_mining_drill.mining_speed * (1 + quality.level * 0.3)
+        local n, u = string.match(hidden_mining_drill.energy_usage, "(%d)(.*)")
+        hidden_mining_drill.energy_usage = n * (1 + quality.level * 0.3) .. u
 
         table.insert(hidden_mining_drills, hidden_mining_drill)
       end
