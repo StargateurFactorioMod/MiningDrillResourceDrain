@@ -3,6 +3,12 @@ local mdrd = {}
 mdrd.level_max = 7
 mdrd.debug = false
 mdrd.remove_mining_productivity = settings.startup["mdrd-remove-mining-productivity"].value
+mdrd.ignore_list = {}
+---@diagnostic disable-next-line: param-type-mismatch
+for v in settings.startup["mdrd-ignore-list"].value:gmatch("([^,]+)") do
+  v = v:match("^%s*(.-)%s*$")
+  mdrd.ignore_list[v] = {}
+end
 
 mdrd.UPGRADE_NOOP = 0
 mdrd.UPGRADE_SUCCESS = 1
@@ -82,7 +88,7 @@ function mdrd.upgrade(mining_drill, level)
     name = base_name
   end
 
-  if name == mining_drill.name then
+  if name == mining_drill.name or mdrd.ignore_list[base_name] then
     return mdrd.UPGRADE_NOOP
   elseif mining_drill.order_upgrade({
         target = {
@@ -100,18 +106,22 @@ function mdrd.upgrade(mining_drill, level)
   end
 end
 
+function mdrd.update_level(force)
+  local level
+  for i = 1, mdrd.level_max do
+    local tech = force.technologies["mining-efficiency-" .. i]
+    if not tech.researched then
+      break
+    else
+      level = i
+    end
+  end
+  storage.forces[force.name] = level
+end
+
 function mdrd.upgrade_all()
   for name, force in pairs(game.forces) do
-    local level
-    for i = 1, mdrd.level_max do
-      local tech = force.technologies["mining-efficiency-" .. i]
-      if not tech.researched then
-        break
-      else
-        level = i
-      end
-    end
-    storage.forces[name] = level
+    mdrd.update_level(force)
     local result = mdrd.upgrade_force(force, storage.forces[name])
     mdrd.print_result(force, result)
   end

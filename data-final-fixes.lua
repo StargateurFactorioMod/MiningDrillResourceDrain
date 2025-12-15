@@ -71,41 +71,43 @@ local mdrd_mining_drills = {}
 for quality_name, quality in pairs(data.raw["quality"]) do
   if quality_name ~= "quality-unknown" then
     for name, mining_drill in pairs(data.raw["mining-drill"]) do
-      mining_drill.resource_drain_rate_percent = 100
-      for level = 1, mdrd.level_max do
-        local mdrd_mining_drill = table.deepcopy(mining_drill)
-        mdrd_mining_drill.name = mdrd.mining_name(mdrd_mining_drill.name,  quality_name, level)
-        local icons = mdrd_mining_drill.icons or { {
-          icon = mdrd_mining_drill.icon,
-          icon_size = mdrd_mining_drill.icon_size,
-        } }
-        table.insert(icons, {
-          icon = "__MiningDrillResourceDrain__/graphics/" .. level .. ".png",
-          icon_size = 64,
-        })
-        table.insert(icons, {
-          icon = quality.icon,
-          icon_size = quality.icon_size,
-          scale = 0.25,
-          shift = { -8, 8 },
-        })
-        mdrd_mining_drill.icons = icons
-        mdrd_mining_drill.hidden_in_factoriopedia = true
-        mdrd_mining_drill.placeable_by = { item = name, count = 1 }
-        mdrd_mining_drill.localised_name = { "entity-name." .. name }
-        mdrd_mining_drill.localised_description = {
-          "",
-          {"entity-description." .. name},
-          "\n",
-          {"mdrd.entity-icon", mdrd_mining_drill.name},
-          ".",
-        }
-        local rdrp = mdrd.rdrp_by_level(mdrd_mining_drill.resource_drain_rate_percent, level)
-        mdrd_mining_drill.resource_drain_rate_percent = rdrp
-        mdrd_mining_drill.mining_speed = mdrd_mining_drill.mining_speed * (1 + quality.level * 0.3)
-        local n, u = string.match(mdrd_mining_drill.energy_usage, "(%d)(.*)")
-        mdrd_mining_drill.energy_usage = n * (1 + quality.level * 0.3) .. u
-        table.insert(mdrd_mining_drills, mdrd_mining_drill)
+      if not mdrd.ignore_list[name] then
+        mining_drill.resource_drain_rate_percent = 100
+        for level = 1, mdrd.level_max do
+          local mdrd_mining_drill = table.deepcopy(mining_drill)
+          mdrd_mining_drill.name = mdrd.mining_name(mdrd_mining_drill.name,  quality_name, level)
+          local icons = mdrd_mining_drill.icons or { {
+            icon = mdrd_mining_drill.icon,
+            icon_size = mdrd_mining_drill.icon_size,
+          } }
+          table.insert(icons, {
+            icon = "__MiningDrillResourceDrain__/graphics/" .. level .. ".png",
+            icon_size = 64,
+          })
+          table.insert(icons, {
+            icon = quality.icon,
+            icon_size = quality.icon_size,
+            scale = 0.25,
+            shift = { -8, 8 },
+          })
+          mdrd_mining_drill.icons = icons
+          mdrd_mining_drill.hidden_in_factoriopedia = true
+          mdrd_mining_drill.placeable_by = { item = name, count = 1 }
+          mdrd_mining_drill.localised_name = { "entity-name." .. name }
+          mdrd_mining_drill.localised_description = {
+            "",
+            {"entity-description." .. name},
+            "\n",
+            {"mdrd.entity-icon", mdrd_mining_drill.name},
+            ".",
+          }
+          local rdrp = mdrd.rdrp_by_level(mdrd_mining_drill.resource_drain_rate_percent, level)
+          mdrd_mining_drill.resource_drain_rate_percent = rdrp
+          mdrd_mining_drill.mining_speed = mdrd_mining_drill.mining_speed * (1 + quality.level * 0.3)
+          local n, u = string.match(mdrd_mining_drill.energy_usage, "(%d+)(.+)")
+          mdrd_mining_drill.energy_usage = n * (1 + quality.level * 0.3) .. u
+          table.insert(mdrd_mining_drills, mdrd_mining_drill)
+        end
       end
     end
   end

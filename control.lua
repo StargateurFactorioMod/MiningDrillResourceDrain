@@ -20,6 +20,7 @@ end, {filter_mining_drill})
 
 script.on_event(defines.events.on_technology_effects_reset, function (event)
   local force = event.force
+  mdrd.update_level(force)
   local result = mdrd.upgrade_force(force, storage.forces[force.name])
   if mdrd.debug then
     mdrd.print_result(force, result)

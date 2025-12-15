@@ -5,4 +5,10 @@ data:extend({
     setting_type = "startup",
     default_value = true,
   },
+  {
+    type = "string-setting",
+    name = "mdrd-ignore-list",
+    setting_type = "startup",
+    default_value = "burner-mining-drill",
+  },
 })

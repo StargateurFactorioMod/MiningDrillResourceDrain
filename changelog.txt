@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.8.0
+Date: 2025-12-15
+  Features:
+    - Add ignore list, ignore burner-mining-drill by default
+  Bugfixes:
+    - Fix energy consumption for quality drills
+---------------------------------------------------------------------------------------------------
 Version: 0.7.0
 Date: 2025-12-14
   Features:
