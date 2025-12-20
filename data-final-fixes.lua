@@ -1,4 +1,5 @@
 local mdrd = require("mdrd")
+local util = require("util")
 
 -- Add technology
 local tech_icon = "__base__/graphics/technology/mining-productivity.png"
@@ -70,9 +71,15 @@ end
 local mdrd_mining_drills = {}
 for quality_name, quality in pairs(data.raw["quality"]) do
   if quality_name ~= "quality-unknown" then
+    -- remove drain resource quality effects of mining drill
+    quality.mining_drill_resource_drain_multiplier = 1
+
     for name, mining_drill in pairs(data.raw["mining-drill"]) do
       if not mdrd.ignore_list[name] then
+        -- set mining drill to rdrp 100 and buff quality effect of mining drill
+        mining_drill.quality_affects_mining_radius = true
         mining_drill.resource_drain_rate_percent = 100
+
         for level = 1, mdrd.level_max do
           local mdrd_mining_drill = table.deepcopy(mining_drill)
           mdrd_mining_drill.name = mdrd.mining_name(mdrd_mining_drill.name,  quality_name, level)
@@ -104,8 +111,8 @@ for quality_name, quality in pairs(data.raw["quality"]) do
           local rdrp = mdrd.rdrp_by_level(mdrd_mining_drill.resource_drain_rate_percent, level)
           mdrd_mining_drill.resource_drain_rate_percent = rdrp
           mdrd_mining_drill.mining_speed = mdrd_mining_drill.mining_speed * (1 + quality.level * 0.3)
-          local n, u = string.match(mdrd_mining_drill.energy_usage, "(%d+)(.+)")
-          mdrd_mining_drill.energy_usage = n * (1 + quality.level * 0.3) .. u
+          local energy = util.parse_energy(mdrd_mining_drill.energy_usage)
+          mdrd_mining_drill.energy_usage = energy * (1 + quality.level * 0.3) .. "W"
           table.insert(mdrd_mining_drills, mdrd_mining_drill)
         end
       end
@@ -115,7 +122,7 @@ end
 
 data.extend(mdrd_mining_drills)
 
--- Remove mining productivity
+-- Remove mining productivity tech
 if mdrd.remove_mining_productivity then
   local i = 1
   while true do
@@ -127,9 +134,4 @@ if mdrd.remove_mining_productivity then
       break
     end
   end
-end
-
--- remove drain resource quality effects of mining drill
-for _, quality in pairs(data.raw["quality"]) do
-  quality.mining_drill_resource_drain_multiplier = 1
 end
