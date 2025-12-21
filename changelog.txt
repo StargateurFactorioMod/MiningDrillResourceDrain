@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.10.0
+Date: 2025-12-21
+  Changes:
+    - tech create at data stage
+    - mining drill create at data-updates
+    - remove mining prod done at data-final-fixes
+---------------------------------------------------------------------------------------------------
 Version: 0.9.0
 Date: 2025-12-20
   Minor Features:
