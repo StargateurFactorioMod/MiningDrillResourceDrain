@@ -2,9 +2,7 @@ local mdrd = require("mdrd")
 
 local filter_mining_drill = { filter = "type", type = "mining-drill" }
 
-script.on_init(function()
-  storage.forces = {}
-end)
+script.on_init(mdrd.upgrade_all)
 
 script.on_event(defines.events.on_built_entity, function(event)
   local entity = event.entity
@@ -26,6 +24,8 @@ script.on_event(defines.events.on_technology_effects_reset, function (event)
     mdrd.print_result(force, result)
   end
 end)
+
+script.on_configuration_changed(mdrd.upgrade_all)
 
 script.on_event(defines.events.on_research_finished, function(event)
   local research = event.research

@@ -79,8 +79,8 @@ function mdrd.upgrade(mining_drill, level)
   local name
   if level then
     -- In case level is in unexpected state
-    if level < 1 or level > mdrd.level_max then
-      mining_drill.force.print("mdrd: cancel upgrade: level < 1 or level > level_max")
+    if level < 0 or level > mdrd.level_max then
+      mining_drill.force.print("mdrd: cancel upgrade: level < 0 or level > level_max")
       return mdrd.UPGRADE_FAIL
     end
     name = mdrd.mining_name(base_name, mining_drill.quality.name, level)
@@ -107,7 +107,7 @@ function mdrd.upgrade(mining_drill, level)
 end
 
 function mdrd.update_level(force)
-  local level
+  local level = 0
   for i = 1, mdrd.level_max do
     local tech = force.technologies["mining-efficiency-" .. i]
     if not tech.researched then
@@ -120,6 +120,7 @@ function mdrd.update_level(force)
 end
 
 function mdrd.upgrade_all()
+  storage.forces = {}
   for name, force in pairs(game.forces) do
     mdrd.update_level(force)
     local result = mdrd.upgrade_force(force, storage.forces[name])
@@ -128,16 +129,16 @@ function mdrd.upgrade_all()
 end
 
 function mdrd.unresearch_all()
+  storage.forces = {}
   for name, force in pairs(game.forces) do
     for i = 1, mdrd.level_max do
       local tech = force.technologies["mining-efficiency-" .. i]
       tech.researched = false
-      storage.forces[name] = nil
     end
+    storage.forces[name] = nil
     local result = mdrd.upgrade_force(force, nil)
     mdrd.print_result(force, result)
   end
-  storage.forces = {}
 end
 
 function mdrd.info(command)
@@ -150,7 +151,9 @@ function mdrd.info(command)
 end
 
 function mdrd.downgrade_all()
-  for _, force in pairs(game.forces) do
+  storage.forces = {}
+  for name, force in pairs(game.forces) do
+    storage.forces[name] = nil
     local result = mdrd.upgrade_force(force, nil)
     mdrd.print_result(force, result)
   end

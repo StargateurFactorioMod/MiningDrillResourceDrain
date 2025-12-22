@@ -14,9 +14,9 @@ for quality_name, quality in pairs(data.raw["quality"]) do
         mining_drill.quality_affects_mining_radius = true
         mining_drill.resource_drain_rate_percent = 100
 
-        for level = 1, mdrd.level_max do
+        for level = 0, mdrd.level_max do
           local mdrd_mining_drill = table.deepcopy(mining_drill)
-          mdrd_mining_drill.name = mdrd.mining_name(mdrd_mining_drill.name,  quality_name, level)
+          mdrd_mining_drill.name = mdrd.mining_name(mdrd_mining_drill.name, quality_name, level)
           local icons = mdrd_mining_drill.icons or { {
             icon = mdrd_mining_drill.icon,
             icon_size = mdrd_mining_drill.icon_size,
@@ -37,9 +37,9 @@ for quality_name, quality in pairs(data.raw["quality"]) do
           mdrd_mining_drill.localised_name = { "entity-name." .. name }
           mdrd_mining_drill.localised_description = {
             "",
-            {"entity-description." .. name},
+            { "entity-description." .. name },
             "\n",
-            {"mdrd.entity-icon", mdrd_mining_drill.name},
+            { "mdrd.entity-icon",           mdrd_mining_drill.name },
             ".",
           }
           local rdrp = mdrd.rdrp_by_level(mdrd_mining_drill.resource_drain_rate_percent, level)
