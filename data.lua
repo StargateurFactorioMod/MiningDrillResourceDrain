@@ -6,13 +6,13 @@ local tech_icon = "__base__/graphics/technology/mining-productivity.png"
 local effects = {
   {
     type = "nothing",
-    icons = {{
+    icons = { {
       icon = tech_icon,
       icon_size = 256,
     }, {
       icon = "__core__/graphics/icons/technology/effect-constant/effect-constant-mining-productivity.png",
       icon_size = 64,
-    }},
+    } },
     effect_description = {
       "technology-effects.mining-drill-resource-drain",
     },
@@ -24,11 +24,54 @@ data:extend({ {
   name = "mining-efficiency-1",
   icons = tech_icons,
   effects = effects,
-  prerequisites = { "space-science-pack" },
+  prerequisites = { "production-science-pack" },
   upgrade = true,
   unit =
   {
-    count = 1000,
+    count = 2^16,
+    ingredients =
+    {
+      { "automation-science-pack", 1 },
+      { "logistic-science-pack",   1 },
+      { "chemical-science-pack",   1 },
+      { "production-science-pack", 1 },
+    },
+    time = 30,
+  },
+} })
+
+data:extend({ {
+  type = "technology",
+  name = "mining-efficiency-2",
+  icons = tech_icons,
+  effects = effects,
+  prerequisites = { "utility-science-pack", "mining-efficiency-1" },
+  upgrade = true,
+  unit =
+  {
+    count = 2^20,
+    ingredients =
+    {
+      { "automation-science-pack", 1 },
+      { "logistic-science-pack",   1 },
+      { "chemical-science-pack",   1 },
+      { "production-science-pack", 1 },
+      { "utility-science-pack",    1 },
+    },
+    time = 45,
+  },
+} })
+
+data:extend({ {
+  type = "technology",
+  name = "mining-efficiency-3",
+  icons = tech_icons,
+  effects = effects,
+  prerequisites = { "space-science-pack", "mining-efficiency-2" },
+  upgrade = true,
+  unit =
+  {
+    count = 2^22,
     ingredients =
     {
       { "automation-science-pack", 1 },
@@ -41,28 +84,95 @@ data:extend({ {
     time = 60,
   },
 } })
-for level = 2, mdrd.level_max do
-    local previous_level = level - 1
-    data:extend({ {
-      type = "technology",
-      name = "mining-efficiency-" .. level,
-      icons = tech_icons,
-      effects = effects,
-      upgrade = true,
-      prerequisites = { "mining-efficiency-" .. previous_level },
-      unit =
-      {
-        count = 1000 * (10 ^ previous_level),
-        ingredients =
-        {
-          { "automation-science-pack", 1 },
-          { "logistic-science-pack",   1 },
-          { "chemical-science-pack",   1 },
-          { "production-science-pack", 1 },
-          { "utility-science-pack",    1 },
-          { "space-science-pack",      1 },
-        },
-        time = 60,
-      }
-    } })
-end
+
+data:extend({ {
+  type = "technology",
+  name = "mining-efficiency-4",
+  icons = tech_icons,
+  effects = effects,
+  prerequisites = { "mining-efficiency-3" },
+  upgrade = true,
+  unit =
+  {
+    count = 2^24,
+    ingredients =
+    {
+      { "automation-science-pack", 1 },
+      { "logistic-science-pack",   1 },
+      { "chemical-science-pack",   1 },
+      { "production-science-pack", 1 },
+      { "utility-science-pack",    1 },
+      { "space-science-pack",      1 },
+    },
+    time = 60,
+  },
+} })
+
+data:extend({ {
+  type = "technology",
+  name = "mining-efficiency-5",
+  icons = tech_icons,
+  effects = effects,
+  prerequisites = { "mining-efficiency-4" },
+  upgrade = true,
+  unit =
+  {
+    count = 2^26,
+    ingredients =
+    {
+      { "automation-science-pack", 1 },
+      { "logistic-science-pack",   1 },
+      { "chemical-science-pack",   1 },
+      { "production-science-pack", 1 },
+      { "utility-science-pack",    1 },
+      { "space-science-pack",      1 },
+    },
+    time = 60,
+  },
+} })
+
+data:extend({ {
+  type = "technology",
+  name = "mining-efficiency-6",
+  icons = tech_icons,
+  effects = effects,
+  prerequisites = { "mining-efficiency-5" },
+  upgrade = true,
+  unit =
+  {
+    count = 2^28,
+    ingredients =
+    {
+      { "automation-science-pack", 1 },
+      { "logistic-science-pack",   1 },
+      { "chemical-science-pack",   1 },
+      { "production-science-pack", 1 },
+      { "utility-science-pack",    1 },
+      { "space-science-pack",      1 },
+    },
+    time = 60,
+  },
+} })
+
+data:extend({ {
+  type = "technology",
+  name = "mining-efficiency-7",
+  icons = tech_icons,
+  effects = effects,
+  prerequisites = { "mining-efficiency-6" },
+  upgrade = true,
+  unit =
+  {
+    count = 2^29,
+    ingredients =
+    {
+      { "automation-science-pack", 1 },
+      { "logistic-science-pack",   1 },
+      { "chemical-science-pack",   1 },
+      { "production-science-pack", 1 },
+      { "utility-science-pack",    1 },
+      { "space-science-pack",      1 },
+    },
+    time = 60,
+  },
+} })

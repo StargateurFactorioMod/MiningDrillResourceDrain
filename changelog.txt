@@ -1,8 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.12.0
+Date: 2025-12-23
+  Changes:
+    - balance tech cost, since the mechanic is very different that productivity it's cost less
+      also first level will require less tech level but a big amount
+---------------------------------------------------------------------------------------------------
 Version: 0.11.0
-Date: 2025-12-21
+Date: 2025-12-22
   Bugfixes:
-    - Fixed that unwithout tech quality mining will not have better speed
+    - Fixed that without any mining efficienty level quality mining drill didn't have better speed
 ---------------------------------------------------------------------------------------------------
 Version: 0.10.0
 Date: 2025-12-21
