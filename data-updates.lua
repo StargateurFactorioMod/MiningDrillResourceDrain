@@ -46,7 +46,7 @@ for quality_name, quality in pairs(data.raw["quality"]) do
           mdrd_mining_drill.resource_drain_rate_percent = rdrp
           mdrd_mining_drill.mining_speed = mdrd_mining_drill.mining_speed * (1 + quality.level * 0.3)
           local energy = util.parse_energy(mdrd_mining_drill.energy_usage)
-          mdrd_mining_drill.energy_usage = energy * (1 + quality.level * 0.3) .. "W"
+          mdrd_mining_drill.energy_usage = energy * (1 + quality.level * 0.3) .. "J"
           table.insert(mdrd_mining_drills, mdrd_mining_drill)
         end
       end
