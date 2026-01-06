@@ -12,6 +12,7 @@ for quality_name, quality in pairs(data.raw["quality"]) do
       if not mdrd.ignore_list[name] then
         -- set mining drill to rdrp 100 and buff quality effect of mining drill
         mining_drill.quality_affects_mining_radius = true
+        mining_drill.quality_affects_module_slots = true
         mining_drill.resource_drain_rate_percent = 100
 
         for level = 0, mdrd.level_max do

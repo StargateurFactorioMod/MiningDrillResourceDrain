@@ -75,12 +75,15 @@ function mdrd.is_normal_mining_drill(name)
 end
 
 function mdrd.upgrade(mining_drill, level)
+
   local base_name = mdrd.get_base_name(mining_drill.name) or mining_drill.name
   local name
+  local force = mining_drill.force
+  local mining_drill_name = mining_drill.name
   if level then
     -- In case level is in unexpected state
     if level < 0 or level > mdrd.level_max then
-      mining_drill.force.print("mdrd: cancel upgrade: level < 0 or level > level_max")
+      force.print("mdrd: cancel upgrade: level < 0 or level > level_max")
       return mdrd.UPGRADE_FAIL
     end
     name = mdrd.mining_name(base_name, mining_drill.quality.name, level)
@@ -90,20 +93,23 @@ function mdrd.upgrade(mining_drill, level)
 
   if name == mining_drill.name or mdrd.ignore_list[base_name] then
     return mdrd.UPGRADE_NOOP
+  -- after this mining_drill may be invalid somehow
   elseif mining_drill.order_upgrade({
-        target = {
-          name = name,
-          quality = mining_drill.quality
-        },
-        force = mining_drill.force,
-      }) then
-    mdrd.print_debug(mining_drill.force, string.format("mdrd: upgrade %s to %s", mining_drill.name, name))
-    mining_drill.apply_upgrade()
-    return mdrd.UPGRADE_SUCCESS
-  else
-    mining_drill.force.print(string.format("mdrd: can't upgrade %s to %s", mining_drill.name, name))
-    return mdrd.UPGRADE_FAIL
+    target = {
+      name = name,
+      quality = mining_drill.quality
+    },
+    force = force,
+  }) then
+    if mining_drill.valid then
+      mining_drill.apply_upgrade()
+      mdrd.print_debug(force, string.format("mdrd: upgrade %s to %s", mining_drill_name, name))
+      return mdrd.UPGRADE_SUCCESS
+    end
   end
+
+  force.print(string.format("mdrd: can't upgrade %s to %s", mining_drill_name, name))
+  return mdrd.UPGRADE_FAIL
 end
 
 function mdrd.update_level(force)

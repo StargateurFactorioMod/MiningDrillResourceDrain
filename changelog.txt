@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.13.0
+Date: 2025-12-23
+  Changes:
+    - Reduce cost, since I nerf big mining drill
+    - quality affect module count of mining drill
+  Bugfixes:
+    - Check if entity is still valid after order_upgrade, this can happen if another script do
+      something with the entity
+---------------------------------------------------------------------------------------------------
 Version: 0.12.1
 Date: 2025-12-23
   Bugfixes:

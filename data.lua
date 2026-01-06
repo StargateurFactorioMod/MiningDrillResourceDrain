@@ -28,7 +28,7 @@ data:extend({ {
   upgrade = true,
   unit =
   {
-    count = 2^16,
+    count = 3^6,
     ingredients =
     {
       { "automation-science-pack", 1 },
@@ -49,7 +49,7 @@ data:extend({ {
   upgrade = true,
   unit =
   {
-    count = 2^20,
+    count = 3^8,
     ingredients =
     {
       { "automation-science-pack", 1 },
@@ -71,7 +71,7 @@ data:extend({ {
   upgrade = true,
   unit =
   {
-    count = 2^22,
+    count = 3^10,
     ingredients =
     {
       { "automation-science-pack", 1 },
@@ -94,7 +94,7 @@ data:extend({ {
   upgrade = true,
   unit =
   {
-    count = 2^24,
+    count = 3^12,
     ingredients =
     {
       { "automation-science-pack", 1 },
@@ -117,7 +117,7 @@ data:extend({ {
   upgrade = true,
   unit =
   {
-    count = 2^26,
+    count = 3^14,
     ingredients =
     {
       { "automation-science-pack", 1 },
@@ -140,7 +140,7 @@ data:extend({ {
   upgrade = true,
   unit =
   {
-    count = 2^28,
+    count = 3^16,
     ingredients =
     {
       { "automation-science-pack", 1 },
@@ -163,7 +163,7 @@ data:extend({ {
   upgrade = true,
   unit =
   {
-    count = 2^29,
+    count = 3^18,
     ingredients =
     {
       { "automation-science-pack", 1 },
