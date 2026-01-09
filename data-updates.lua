@@ -6,13 +6,17 @@ local mdrd_mining_drills = {}
 for quality_name, quality in pairs(data.raw["quality"]) do
   if quality_name ~= "quality-unknown" then
     -- remove drain resource quality effects of mining drill
-    quality.mining_drill_resource_drain_multiplier = 1
+    if mods["quality"] then
+      quality.mining_drill_resource_drain_multiplier = 1
+    end
 
     for name, mining_drill in pairs(data.raw["mining-drill"]) do
       if not mdrd.ignore_list[name] then
         -- set mining drill to rdrp 100 and buff quality effect of mining drill
-        mining_drill.quality_affects_mining_radius = true
-        mining_drill.quality_affects_module_slots = true
+        if mods["quality"] then
+          mining_drill.quality_affects_mining_radius = true
+          mining_drill.quality_affects_module_slots = true
+        end
         mining_drill.resource_drain_rate_percent = 100
 
         for level = 0, mdrd.level_max do
